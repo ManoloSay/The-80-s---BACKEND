@@ -19,7 +19,7 @@ const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
   secure: true,
-  auth: {
+  auth: { 
     user: 'maneldengra@gmail.com',
     pass: 'zcvv knxv sepa dgta'
   },
@@ -319,20 +319,6 @@ app.post('/actualizar-registro', (req, res) => {
       console.error('Error al verificar el correo en Firebase:', error);
       res.status(500).json({ error: 'Error al verificar el correo en Firebase' });
     });
-});
-
-app.post('/scraping-cantantes', (req, res) => {
-  const url = 'http://cantantesfamosos.net/';
-  request(url, (error, response, html) => {
-    if (!error && response.statusCode === 200) {
-      const $ = cheerio.load(html);
-      $('h3').each((index, element) => {
-        console.log($(element).text());
-      });
-    } else {
-      console.error('Error al hacer la solicitud HTTP');
-    }
-  });
 });
 
 //administrador
