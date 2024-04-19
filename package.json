@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "MEAN",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Manuel",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "@cloudinary/url-gen": "^1.11.2",
+    "axios": "^1.6.0",
+    "babel": "^6.23.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase": "^10.1.0",
+    "firebase-admin": "^11.10.1",
+    "node-cron": "^3.0.2",
+    "nodemailer": "^6.9.4",
+    "request": "^2.88.2",
+    "socket.io": "^4.7.1"
+  }
+}
